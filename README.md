@@ -1,4 +1,4 @@
-# django_netflix_clone
+# Netflix Clone in Django
 
 Run the app
 
