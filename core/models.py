@@ -10,7 +10,6 @@ AGE_CHOICES = (
 MOVIE_CHOICES = (
     ('seasonal', 'Seasonal'),
     ('single', 'Single')
-
 )
 
 class CustomUser(AbstractUser):
