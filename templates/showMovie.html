@@ -30,27 +30,6 @@ Movie
         const video_param = parseInt(url.searchParams.get("epi")) ? parseInt(url.searchParams.get("epi")) : 0
 
         videoEL.setAttribute('src',`/media/${movie_data[video_param].file}`)
-
-        function vidplay() {
-            var video = document.getElementById("Video1");
-            var button = document.getElementById("play");
-            if (video.paused) {
-               video.play();
-               button.textContent = "||";
-            } else {
-               video.pause();
-               button.textContent = ">";
-            }
-         }
-     
-         function restart() {
-             var video = document.getElementById("Video1");
-             video.currentTime = 0;
-         }
-     
-         function skip(value) {
-             var video = document.getElementById("Video1");
-             video.currentTime += value;
-         }     
+        
     </script>
 {% endblock content %}
