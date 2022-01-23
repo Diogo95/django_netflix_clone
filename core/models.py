@@ -21,6 +21,9 @@ class Profile(models.Model):
     age_limit = models.CharField(max_length = 10, choices=AGE_CHOICES)
     uuid = models.UUIDField(default = uuid.uuid4)
 
+    def __str__(self):
+        return self.name +" "+self.age_limit
+
 class Movie(models.Model):
     title = models.CharField(max_length=225)
     description = models.TextField(blank = True, null = True)

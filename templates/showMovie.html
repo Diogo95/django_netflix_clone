@@ -4,7 +4,8 @@ Movie
 {% endblock title %}
 
 {% block others %}
-    <script src="https://unpkg.com/ionicons@5.4.0/dist/ionicons.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@5.4.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule="" src="https://unpkg.com/ionicons@5.4.0/dist/ionicons/ionicons.js"></script>    
     <style>
         .player::-webkit-progress-bar{
             color: red;
@@ -13,7 +14,8 @@ Movie
 {% endblock others %}
 
 {% block content %}
-{% include 'partials/navbar.html' %}
+ 
+
     <main class='bg-primary_black h-full w-full '>
         {{movie|json_script:'movie_data'}}
 

@@ -10,6 +10,13 @@ Profile Create
     <section class='bg-primary_black min-h-screen bg-cover py-20 md:py-32 flex-col flex items-center' style="background-image:url('{% static 'background_netflix.jpg' %}')">
         <div class="flex flex-wrap justify-center  w-10/12  md:w-6/12">
             <form method = 'POST' class="w-full md:w-8/12 bg-gray-900 p-5 rounded-lg">
+                {% if request.user.profiles.all|length > 5 %}
+                <p class='text-center text-xl'>
+
+                    Sorry, you can't create any Profiles because you have exceeded the limit
+                    
+                </p>
+                {% else %}
                 <h1 class="text-4xl text-center text-gray-100 font-medium">
                     Create A Profile
                 </h1>
